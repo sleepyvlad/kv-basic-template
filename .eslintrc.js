@@ -23,6 +23,7 @@ module.exports = {
   },
   plugins: ["react", "import", "@typescript-eslint"],
   rules: {
+    "object-curly-newline": 0,
     "jsx-quotes": ["error", "prefer-double"],
     "react/jsx-filename-extension": 0,
     quotes: [2, "double", { avoidEscape: true }],

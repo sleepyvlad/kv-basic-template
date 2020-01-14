@@ -9,6 +9,7 @@
     "react-scripts": "^3.3.0"
   },
   "devDependencies": {
+    "@storybook/react": "^5.3.3",
     "@babel/core": "^7.8.3",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
@@ -46,12 +47,14 @@
   "prettier": {
     "singleQuote": false,
     "trailingComma": "all"
+
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack-dev-server": "webpack-dev-server",
     "start": "webpack-dev-server --mode=development",
-    "prod": "webpack --mode=production"
+    "prod": "webpack --mode=production",
+    "storybook": "start-storybook"
   },
   "repository": {
     "type": "git",
