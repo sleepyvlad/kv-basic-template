@@ -2,7 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es6: true,
-    node: true
+    node: true,
   },
   extends: [
     "plugin:react/recommended",
@@ -11,21 +11,23 @@ module.exports = {
   ],
   globals: {
     Atomics: "readonly",
-    SharedArrayBuffer: "readonly"
+    SharedArrayBuffer: "readonly",
   },
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 2018,
-    sourceType: "module"
+    sourceType: "module",
   },
   plugins: ["react", "import", "@typescript-eslint"],
   rules: {
     "object-curly-newline": 0,
     "jsx-quotes": ["error", "prefer-double"],
     "react/jsx-filename-extension": 0,
+    "react/button-has-type": 0,
+    "default-case": 0,
     quotes: [2, "double", { avoidEscape: true }],
     "import/no-unresolved": 0,
     "import/extensions": [
@@ -35,15 +37,15 @@ module.exports = {
         js: "never",
         jsx: "never",
         tsx: "never",
-        ts: "never"
-      }
-    ]
+        ts: "never",
+      },
+    ],
   },
   settings: {
     "import/resolver": {
       node: {
-        extensions: [".js", ".jsx", ".ts", ".tsx"]
-      }
-    }
-  }
+        extensions: [".js", ".jsx", ".ts", ".tsx"],
+      },
+    },
+  },
 };
