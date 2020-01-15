@@ -7,7 +7,7 @@ interface TitleProps {
 }
 
 export const Title = (props: TitleProps): React.ReactElement => {
-  const { children, as = "h2", className } = props;
+  const { children, as, className } = props;
 
   switch (as) {
     case "h1":
@@ -22,6 +22,8 @@ export const Title = (props: TitleProps): React.ReactElement => {
       return <h5 className={className}>{children}</h5>;
     case "h6":
       return <h6 className={className}>{children}</h6>;
+    default:
+      return <h2 className={className}>{children}</h2>;
   }
 };
 

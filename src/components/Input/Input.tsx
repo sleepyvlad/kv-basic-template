@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 interface InputProps {
   className?: string;
@@ -31,8 +31,6 @@ const Input = (props: InputProps): React.ReactElement => {
     tabIndex,
   } = props;
 
-  const [focused, setFocused] = useState(false);
-
   const handleChange = (ev: React.SyntheticEvent<HTMLInputElement>): void => {
     const {
       currentTarget: { value },
@@ -41,16 +39,12 @@ const Input = (props: InputProps): React.ReactElement => {
   };
 
   const handleFocus = (ev: React.SyntheticEvent<HTMLInputElement>): void => {
-    setFocused(true);
-
     if (onFocus) {
       onFocus(ev);
     }
   };
 
   const handleBlur = (ev: React.SyntheticEvent<HTMLInputElement>): void => {
-    setFocused(false);
-
     if (onBlur) {
       onBlur(ev);
     }
