@@ -63,7 +63,7 @@
     "start": "webpack-dev-server --mode=development",
     "prod": "webpack --mode=production",
     "storybook": "start-storybook",
-    "lint": "node ./node_modules/eslint/bin/eslint.js ./src/ --ext .js,.jsx,.ts,.tsx,.css,.pcss",
+    "lint": "node ./node_modules/eslint/bin/eslint.js ./src/ --fix --ext .js,.jsx,.ts,.tsx,.css,.pcss",
     "type-check": "node ./node_modules/typescript/bin/tsc"
   },
   "repository": {
