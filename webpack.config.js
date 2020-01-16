@@ -25,7 +25,16 @@ module.exports = {
         test: /\.(css|sass|scss)$/,
         use: [
           MiniCssExtractPlugin.loader,
-          "css-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: {
+                mode: "local",
+                localIdentName: "[local]--[hash:base64:5]",
+              },
+              localsConvention: "camelCase",
+            },
+          },
           {
             loader: "postcss-loader",
             options: {

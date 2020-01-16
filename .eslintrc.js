@@ -28,6 +28,7 @@ module.exports = {
     "react/jsx-filename-extension": 0,
     "react/button-has-type": 0,
     "default-case": 0,
+    "@typescript-eslint/no-var-requires": 0,
     quotes: [2, "double", { avoidEscape: true }],
     "import/no-unresolved": 0,
     "import/extensions": [
