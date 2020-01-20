@@ -1,6 +1,6 @@
 {
   "name": "kv-basic-template",
-  "version": "1.0.0",
+  "version": "1.8.0",
   "description": "Functional React template by Vladislav Karimov",
   "main": "index.tsx",
   "dependencies": {
@@ -43,6 +43,7 @@
     "sass-loader": "^8.0.2",
     "ts-loader": "^6.2.1",
     "tslint": "^5.20.1",
+    "typed-css-modules": "^0.6.3",
     "typescript": "^3.7.4",
     "typescript-plugin-css-modules": "^2.1.2",
     "webpack": "^4.41.5",
@@ -61,7 +62,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack-dev-server": "webpack-dev-server",
-    "start": "webpack-dev-server --mode=development",
+    "gen-dts": "tcm -p src/**/*.scss -c",
+    "start": "npm run gen-dts && webpack-dev-server --mode=development",
     "prod": "webpack --mode=production",
     "storybook": "start-storybook",
     "lint": "node ./node_modules/eslint/bin/eslint.js ./src/ --fix --ext .js,.jsx,.ts,.tsx,.css,.pcss",
